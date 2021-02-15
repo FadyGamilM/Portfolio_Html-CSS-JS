@@ -1,0 +1,204 @@
+/*by default the body has a margin = 8px
+you should git rid of that by using :*/
+body
+{
+   margin:0px;
+}
+
+.AppContainer
+{
+   display: grid;
+   grid-template-columns: 1fr; /*each column take the whole width */
+}
+
+/* --------------------------------------------------NavBar Styles------------------------------------------------- */
+.NavContainer
+{
+   display: flex;
+   justify-content: space-between;
+   padding: 4px;
+}
+
+.Left_Side
+{
+   display: flex;
+}
+
+.Right_Side > .Name_Div p
+{
+   /* to justify the <P> with the left_side*/
+   margin-block-start: 0.2em;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+}
+
+/* how to traverse through html tree items */
+/*IMPORTANT:
+    3ala4an keda 3amlt div for each word
+    or for each link 3al4an e7na 3andna 2
+    divs inside the .Left_Side div fa lama
+    negy n3ml display:flex lel Left.Side
+    div el 2 divs haylz2o f ba3d w msh hn3rf
+    n select item mnhom w ne add margin to it
+    so we gave a class name for each one.. cool!*/
+
+/* .NavContainer > .Left_Side > div
+{
+   margin: 5px;
+   font-size: 0.9em;
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+} */
+
+
+
+.Left_Side > .Home_Div
+{
+   margin: 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   height: 22px;
+   border-bottom: 1px solid transparent;
+   transition: border-bottom 0.5s;
+}
+
+.Left_Side >.Home_Div > a
+{
+   text-decoration: none ;
+   color: gray;
+   font-weight: bold;
+   transition: color 0.5s ;
+}
+
+.Left_Side > .About_Div
+{
+   margin: 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   height: 22px;/*by using this we restrict the hieght of the content*/
+   border-bottom: 1px solid transparent;
+   transition: border-bottom 0.5s;
+}
+
+.Left_Side >.About_Div > a
+{
+   text-decoration: none ;
+   color: gray;
+   font-weight: bold;
+   transition: color 0.5s ;
+}
+
+.Left_Side a:hover
+{
+   color: black;
+}
+.About_Div :hover
+{
+   border-bottom:1px solid black ;
+}
+.Home_Div :hover
+{
+   border-bottom: 1px solid black;
+}
+/* -----------------------------------------------Content styles----------------------------------------------------- */
+.Items_Container
+{
+   display: grid;/*now each item will take complete column from the LHS to RHS*/
+   grid-template-columns: 1fr 1fr 1fr; /* so now we give each 3 "things" within this Items_Container, the whole row of Items_Container*/
+}
+
+.Item_Container
+{
+   position: relative;
+   padding: 5px;
+}
+
+.Portfolio_Img
+{
+   height: 350px;
+   width: 100%;
+   background-size: cover;
+   background-position:center ;
+   background-repeat: no-repeat;  
+}
+
+.Portfolio_Img_Text
+{
+   /*now this text will respect it's position and it will be after
+   the .Portfolio_Img and it will be relative to .Item_Container */
+   position: absolute;/*now it won't respect his position anymore and will be on the img itself.*/
+   top:0;
+   display:flex;
+   flex-direction:column;
+   justify-content: center;
+   /*width: 100%;*/ /*to be sutible within it's parent*/
+   align-items: center;/*to align all items whitin this class to it's center*/
+   height: 100%;
+  padding-right: 100px;
+  padding-left: 100px ;
+}
+
+.Logo_Div img
+{
+   width:50%;
+   align-self: center;
+}
+
+/*Initial state for .Subtitle */
+.Portfolio_Img_Text .Subtitle
+{
+   transition: 1s;/*da 3al4an lama t hover over it aw tegy t move away from it, ta5od 1s 3al4an trg3 lel start case*/
+   font-weight: 600;
+   color: transparent;
+}
+
+.Portfolio_Img_Text:hover .Subtitle
+{
+   font-weight: 600;
+   color: lightseagreen;
+}
+/*this class for javascript code*/
+.img-darken
+{
+   transition: 1s;
+   filter: brightness(10%);
+}
+
+
+.Two_Column_Wrapper
+{
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.Profile_Img
+{
+   margin:20px;
+}
+.Profile_Img img
+{
+   width: 100%;
+}
+
+.Info h2
+{
+   color: lightseagreen;
+}
+
+/* final touch, when you be on specific page */
+/*this class build from here to be used in html code*/
+.Active-nav-link
+{
+   border-bottom: 1px solid black;
+}
+
+.Active-nav-link a/* it means any element will be marked by this class do the following to any <a></a> inside it.. cool!*/
+{
+   color: black i !important;
+}
+
+
+
+
+
+
